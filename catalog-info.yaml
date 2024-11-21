@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: emptyfield
+  description: A workflow for onboarding applications to OCP cluster
+  annotations:
+    argocd/app-selector: rht-gitops.com/janus-argocd=emptyfield
+    backstage.io/kubernetes-namespace: orchestrator-gitops
+    backstage.io/kubernetes-id: emptyfield-ci
+    janus-idp.io/tekton: emptyfield
+    github.com/project-slug: orchestrator-test/emptyfield
+spec:
+  type: workflow-project
+  system: system:default/janus-orchestrator
+  lifecycle: development
+  owner: user:guest
